@@ -1,0 +1,59 @@
+`timescale 1ns/1ps
+
+module alu_8bit_tb;
+reg [7:0] A;
+reg [7:0] B;
+reg [2:0] sel;
+wire [7:0] Y;
+wire carry;
+
+alu_8bit dut ( .A(A),.B(B),.Y(Y),.carry(carry),.sel(sel));
+
+initial begin
+ $monitor("Time=%0t A=%b B=%b sel=%b | Y=%b carry=%b",$time,A,B,sel,Y,carry);
+ $dumpfile("alu.vcd");
+ $dumpvars(0, alu_8bit_tb);
+ 
+ 
+ A=8'd2; B=8'd1; sel=3'b000; //addition
+
+ #10;
+
+ A=8'd2; B=8'd1; sel=3'b001; //subtraction
+ 
+ #10;
+ 
+ A=8'b00000101; B=8'b11110000; sel=3'b010; //not op ~A
+
+ #10
+
+ sel=3'b011;
+
+ #10;
+ 
+ sel=3'b100;
+
+ #10;
+
+ sel=3'b101;
+
+ #10;
+ 
+ A = 8'd10; B = 8'd15; sel = 3'b110;
+
+ #10;
+
+ A = 8'd3; B = 8'd4; sel = 3'b111;
+
+ $finish;
+
+end
+
+endmodule
+
+ 
+
+
+ 
+
+ 
