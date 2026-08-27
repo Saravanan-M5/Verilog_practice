@@ -1,0 +1,35 @@
+`timescale 1ns/1ps
+
+module MAC_8bit_tb;
+
+reg [7:0] A ;
+reg [7:0] B;
+reg clk,reset;
+wire [16:0] Acc;
+
+MAC_8bit dut (.A(A),.B(B),.Acc(Acc),.clk(clk),.reset(reset));
+
+always #5 clk = ~clk;
+
+initial begin 
+  
+   $monitor("Time=%0t A=%b B=%b clk=%b reset=%b | Acc=%b",$time,A,B,clk,reset,Acc); 
+   $dumpfile("MAC.vcd");
+   $dumpvars(0,MAC_8bit_tb);
+    
+   clk = 1'b0;
+   reset = 1'b1;
+   A= 8'd10; B= 8'd10;
+   #10;
+   reset = 1'b0;
+   #100 $finish;
+end
+
+endmodule
+   
+   
+    
+
+   
+
+  

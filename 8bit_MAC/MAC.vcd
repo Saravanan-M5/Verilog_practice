@@ -1,0 +1,105 @@
+$date
+	Thu Aug 27 22:53:11 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module MAC_8bit_tb $end
+$var wire 17 ! Acc [16:0] $end
+$var reg 8 " A [7:0] $end
+$var reg 8 # B [7:0] $end
+$var reg 1 $ clk $end
+$var reg 1 % reset $end
+$scope module dut $end
+$var wire 8 & A [7:0] $end
+$var wire 8 ' B [7:0] $end
+$var wire 1 $ clk $end
+$var wire 1 % reset $end
+$var reg 17 ( Acc [16:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx (
+b1010 '
+b1010 &
+1%
+0$
+b1010 #
+b1010 "
+bx !
+$end
+#5000
+b0 !
+b0 (
+1$
+#10000
+0$
+0%
+#15000
+b1100100 !
+b1100100 (
+1$
+#20000
+0$
+#25000
+b11001000 !
+b11001000 (
+1$
+#30000
+0$
+#35000
+b100101100 !
+b100101100 (
+1$
+#40000
+0$
+#45000
+b110010000 !
+b110010000 (
+1$
+#50000
+0$
+#55000
+b111110100 !
+b111110100 (
+1$
+#60000
+0$
+#65000
+b1001011000 !
+b1001011000 (
+1$
+#70000
+0$
+#75000
+b1010111100 !
+b1010111100 (
+1$
+#80000
+0$
+#85000
+b1100100000 !
+b1100100000 (
+1$
+#90000
+0$
+#95000
+b1110000100 !
+b1110000100 (
+1$
+#100000
+0$
+#105000
+b1111101000 !
+b1111101000 (
+1$
+#110000
+0$

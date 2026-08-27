@@ -1,0 +1,19 @@
+module MAC_8bit(
+input wire [7:0] A,
+input wire [7:0] B,
+input wire clk,
+input wire reset,
+output reg [16:0] Acc
+);
+
+always @(posedge clk) begin
+  
+   if(reset)
+        Acc = 17'b0;
+ 
+   else
+       Acc = Acc + (A * B);
+
+ end
+
+endmodule
